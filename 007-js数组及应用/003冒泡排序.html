@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let numbers = [97, 68, 72, 29, 51, 45];
+
+
+        // 外层循环，控制趟数 每一趟找到一个最大值
+        for (let i = 0; i < numbers.length - 1; i++) {
+            // 内层循环， 控制比较的次数，并且判断两个数的大小
+            for (let j = 0; j < numbers.length - 1 - i; j++) {
+                if (numbers[j] > numbers[j + 1]) {
+                    let tmp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = tmp;
+                }
+            }
+        }
+        console.log('numbers :', numbers);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

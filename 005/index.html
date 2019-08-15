@@ -1,0 +1,49 @@
+<style>
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .container {
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .silder {
+        position: relative;
+    }
+
+    .item {
+        opacity: 0;
+        position: absolute;
+        display: block;
+    }
+</style>
+
+<div class="container">
+    <div class="silder">
+        <a class="item" href="#">
+            <img src="https://dummyimage.com/600x400/000/fff&text=A" alt="">
+        </a>
+        <a class="item" href="#">
+            <img src="https://dummyimage.com/600x400/000/fff&text=B" alt="">
+        </a>
+        <a class="item" href="#">
+            <img src="https://dummyimage.com/600x400/000/fff&text=C" alt="">
+        </a>
+    </div>
+</div>
+
+
+<script>
+    const parent = document.querySelector('.silder');
+    const sildes = parent.querySelectorAll('.item');
+    let current = 0;
+
+
+    setInterval(() =>  {
+        ++current
+        sildes[current].style.opacity = 1;
+        },1000);
+</script>

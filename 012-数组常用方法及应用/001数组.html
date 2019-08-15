@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // function fn(arr) {
+
+        //     console.log('arr :', arr instanceof Array); // 检查是否为数组
+        // }
+
+        // var array = [1, 2, 'ww'];
+        // fn(array); 
+
+
+        // 1 栈操作  先进后出
+        // var array = [1, 2, 3, 4];
+        // array.push(6);
+        // var r = array.push(7,8,9,10);
+        // // 在数组的末尾添加
+        // console.log('r :', r);
+        // //返回值为数组的长度
+        // console.log('array :', array);
+
+        // // 返回数组中的最后一个元素，并且会修改数组的长度
+        // var last = array.pop();
+        // console.log(last);
+        // console.log(array.length);
+        // console.log(array);
+
+        // // 2 队列操作 先进先出
+        // var array = [1,2,3];
+        // array.push(4);
+
+        // var frist = array.shift();
+        // console.log(frist);
+        // console.log(array);
+
+        // array.unshift(0);
+        // console.log('array :', array);
+
+        // // 3 排序方法
+        // var array = ['e','a','f','b'];
+        // var newArray = array.reverse();
+        // // 翻转数组
+        // console.log('array :', newArray);
+
+        var array = [35, 23, 15, 4, 192, 26];
+        // // 默认情况下是对字符编码 从小到大排序
+        // array.sort();
+        // // 直接在原数组上进行排序
+        // console.log('array :', array);
+
+        function compare(a, b) {
+            return a - b;
+        }
+
+        array.sort(compare);
+        console.log('array :', array);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

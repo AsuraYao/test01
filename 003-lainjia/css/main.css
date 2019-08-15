@@ -1,0 +1,22 @@
+.nav a{
+  padding: 8px 10px;
+  display: inline-block;
+}
+
+.link-group a{
+    font-size: 1rem;
+    color: black;
+}
+
+.nav .logo,
+.nav .location{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav .logo{
+    width: 160px;
+    height: 50px;
+    background: #777;
+}
+

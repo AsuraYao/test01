@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Student(name, age, sex, score) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.score = score;
+            this.Sayhi = function () {
+                console.log(this.name + ': hello');
+            };
+        }
+
+        var stu1 = new Student('zz', 14, 'nan', 100);
+        var stu2 = new Student('xx', 15, 'nan', 95);
+
+        console.log('stu1 :', stu1);
+
+
+        // new的执行过程
+        // 在内存中创建来一个空的对象
+        // 让构造函数中的 this 指向刚刚创建的对象
+        // 执行构造函数 构造函数中设置属性和方法
+        // 返回了当前对象
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

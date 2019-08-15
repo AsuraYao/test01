@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zhe-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 求任意个数的最大值
+        function getMax() {
+            let max = arguments[0];
+            for (let i = 1; i < arguments.length; i++) {
+                if (max < arguments[i]) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        let max = getMax(23, 43, 45, 234, 546, 765, 625, 465);
+        console.log('max :', max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

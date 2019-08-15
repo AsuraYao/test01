@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 简单类型在内存中如何存储
+        var n1 = 10;
+        console.log('n1 :', n1); // 10
+        var n2 = n1;
+        console.log('n2 :', n2); // 10
+        n1 = 20;
+        console.log('n1 :', n1); // 20
+        console.log('n2 :', n2); // 10
+
+
+        // 复杂类型在内存中如何存储
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.SayHi = function () {
+                console.log(this.name + 'hello');
+            }
+        }
+
+        var p1 = new Person('wss', 23);
+        var p2 = p1;
+        console.log('p1 :', p1);
+        console.log('p2 :', p2);
+        p1.name = 'lss';
+        console.log('p1 :', p1);
+        console.log('p2 :', p2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

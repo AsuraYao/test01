@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //   var num = 5;
+        //   function f1(){
+        //       console.log('num :', num);
+        //       var num = 12;
+        //       function f2 (){
+        //           console.log('num :', num);
+        //       }
+        //       f2();
+        //   }
+        //   f1();
+        //   console.log('num :', num);
+
+        // 预解析
+
+        //  var a = 5;      // var a ;
+        //  function fn (){   // function (){}
+        //      console.log('a :', a);   // var a ;
+        //    var a = 23;    // console.log('a :', a);   undefined
+        // }                   // a = 25;
+        // fn();               //  a = 5;
+        //  fn();
+
+
+        // console.log(a);
+
+        // function a() {
+        //     console.log('aaaaaa');
+        // }
+        // var a = 1;
+        // console.log(a);
+
+        //在预解析的过程中如果函数的变量的名字相同 ， 此时函数优先
+
+        // var a;
+        // function a(){
+        //     console.log('aaaaaa');
+        // }
+        // console.log(a);
+        // a = 1;
+        // console.log(a);
+
+        // var a = 18;
+        // f1();
+
+        // function f1() {
+        //     var b = 9;
+        //     console.log('a :', a);
+        //     console.log('b :', b);
+        //     var a = '123'
+        // }
+
+        // var a;
+
+        // function f1() {
+        //     var b;
+        //     var a;
+        //     b = 9;
+        //     console.log('a :', a);
+        //     console.log('b :', b);
+        //     a = '123';
+        // }
+        // a = 18;
+        // f1();
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

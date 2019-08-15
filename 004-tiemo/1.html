@@ -1,0 +1,47 @@
+<style>
+    :root {
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    .one {
+        display: inline-block;
+        font-size: 2rem;
+        background: black;
+        color: red;
+        padding: 10px;
+        line-height: 1;
+        opacity: 1;
+        border: 2px solid;
+    }
+
+    .counter{
+        font-size: .8rem;
+    }
+
+</style>
+
+<div class="one">
+    <span class="inner">十元 贴膜 <span class="counter"></span>
+    </span>
+</div>
+
+<script>
+    const one = document.querySelector('.one');
+    const inner = one.querySelector('.inner');
+    const counter = inner.querySelector('.counter');
+    let count = 0;
+
+    setInterval(function () {
+
+        if (getComputedStyle(inner).opacity == '1') {
+            inner.style.opacity = 0;
+            one.style.borderColor = 'transparent';
+        } else {
+            inner.style.opacity = 1;
+            one.style.borderColor = 'inherit';
+            count++;
+        }
+         counter.innerText = count + '人用了都说好!';
+    }, 500);
+</script>

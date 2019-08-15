@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    let names = ['q', 'w', 'e', 'r', 't'];
+
+    console.log('names :', names[0]);
+    console.log('names.length :', names.length);
+    console.log('names.last :', names[names.length - 1]);
+
+    names[names.length - 1] = 'y';
+    console.log('names :', names);
+
+    //遍历数组中的每一项
+    let i = names.length - 1;
+    for (; i >= 0; i--) {
+        console.log('names :', names[i]);
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
