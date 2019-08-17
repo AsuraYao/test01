@@ -9,14 +9,23 @@
 </head>
 
 <body>
-    <div id="hand">baidu</div>
+    <div id="hand">
+        <div>123</div>
+        <div>321</div>
+        <p>ppp</p>
+        <span>sss</span>
+    </div>
+    
 
 
     <script>
         // document
-        var main = document.getElementById('main');
+        var hand = document.getElementById('hand');
+        var divs = hand.getElementsByTagName('div');
+        console.log('divs :', divs);
         
     </script>
+    
 </body>
 
 </html>
