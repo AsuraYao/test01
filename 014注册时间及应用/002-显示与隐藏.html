@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin-top: 10px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="click">显示</button>
+    <div id="box" class="show"></div>
+
+    <script>
+        let isClick = document.querySelector('.click');
+        console.log('isClick :', isClick);
+
+        isClick.onclick = function () {
+            let box = document.querySelector('#box');
+            if (box.className == 'show') {
+                box.className = 'hidden'
+            } else {
+                box.classList = 'show'
+            }
+        }
+    </script>
+</body>
+
+
+</html>

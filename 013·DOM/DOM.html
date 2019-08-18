@@ -15,17 +15,25 @@
         <p>ppp</p>
         <span>sss</span>
     </div>
-    
-
+    <div class="title">BMPCC</div>
+    <div class="main">main</div>
 
     <script>
         // document
         var hand = document.getElementById('hand');
         var divs = hand.getElementsByTagName('div');
         console.log('divs :', divs);
-        
+
+        var title = document.getElementsByClassName('title');
+        console.log('title :', title);
+
+        //query   查询
+        //selector  选择器
+
+        var main = document.querySelector('.main');
+        console.log('main :', main);
     </script>
-    
+
 </body>
 
 </html>
