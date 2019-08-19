@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bg {
+            background: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="txtUserName"><br>
+    <input type="password" class="txtUserPassword"><br>
+    <button class="btn">登陆</button>
+
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let txtUserName = document.querySelector('.txtUserName');
+        let txtUserPassword = document.querySelector('.txtUserPassword');
+
+        btn.onclick = function () {
+            if (txtUserName.value.length < 3 || txtUserName.value.length > 6) {
+                txtUserName.className = 'bg';
+            } else {
+                txtUserName.className = '';
+            }
+            if (txtUserPassword.value.length < 6 || txtUserPassword.value.length > 8) {
+                txtUserPassword.className = 'bg';
+            } else {
+                txtUserPassword.className = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

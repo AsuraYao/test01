@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">点击</button>
+    <input type="text" class="txt" value="123">
+    
+    
+    <script>
+    let btn = document.querySelector('.btn');
+    let txt = document.querySelector('.txt');
+
+    btn.onclick = function(){
+        console.log('txt :', txt.value);
+        console.log('txt :', txt.type);
+        console.log('txt :', txt.disabled);
+        txt.disabled = true;
+        console.log('txt :', txt.disabled);
+    }
+    </script>
+</body>
+</html>

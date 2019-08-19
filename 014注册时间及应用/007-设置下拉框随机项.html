@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">随机生成</button>
+    <select id="selCities">
+        <option value="1">北京</option>
+        <option value="2">上海</option>
+        <option value="3">广州</option>
+        <option value="4">深圳</option>
+        <option value="5">杭州</option>
+    </select>
+
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let selCities = document.querySelector('#selCities');
+        let options = selCities.getElementsByTagName('option');
+        btn.onclick = function () {
+            let randomIndex = parseInt(Math.random() * options.length);
+            let option = options[randomIndex];
+            option.selected = true;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <button class="click">显示</button>
+    <button class="click">隐藏</button>
     <div id="box" class="show"></div>
 
     <script>
@@ -35,9 +35,11 @@
         isClick.onclick = function () {
             let box = document.querySelector('#box');
             if (box.className == 'show') {
-                box.className = 'hidden'
+                box.className = 'hidden';
+                this.innerText = '显示';
             } else {
-                box.classList = 'show'
+                box.classList = 'show';
+                this.innerText = '隐藏';
             }
         }
     </script>
