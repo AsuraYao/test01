@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="title">我是title</div>
+
+    <script>
+        let title = document.querySelector('.title');
+        console.log('title :', title.class);
+        // 获取自定义属性的值
+        console.log('title :', title.getAttribute('class'));
+ 
+        // 设置自定义属性
+        title.setAttribute('age','txt');
+        console.log('title :', title.getAttribute('age'));
+
+        // 移除属性
+        title.removeAttribute('age');
+    </script>
+</body>
+
+</html>

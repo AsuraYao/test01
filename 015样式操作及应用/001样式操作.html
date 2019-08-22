@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .btn {
+            margin: 10px;
+        }
+
+        img {
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">切换</button>
+    <img src="img/1000x500-A.png" alt="#" class="imge">
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let imge = document.querySelector('.imge');
+
+        btn.onclick = function () {
+            imge.src = 'img/1000x500-B.png'
+        }
+    </script>
+</body>
+
+</html>

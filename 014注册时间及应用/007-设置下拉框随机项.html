@@ -23,6 +23,7 @@
         let btn = document.querySelector('.btn');
         let selCities = document.querySelector('#selCities');
         let options = selCities.getElementsByTagName('option');
+        
         btn.onclick = function () {
             let randomIndex = parseInt(Math.random() * options.length);
             let option = options[randomIndex];
