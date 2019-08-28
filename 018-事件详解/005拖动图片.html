@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .imge {
+            width: 500px;
+            height: 250px;
+        } */
+    </style>
+</head>
+
+<body>
+    <img src="/Users/xiwenyao/Documents/MyPorject/015样式操作及应用/img/1000x500-A.png" class="imge" alt="">
+
+    <script>
+        let imge = document.querySelector('.imge')
+        document.onmousemove = function (e) {
+            e = e || window.event;
+            imge.style.left = e.pageX + 'px'; 
+            imge.style.top = e.pageY + 'px'; 
+        }
+    </script>
+</body>
+
+</html>

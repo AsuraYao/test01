@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        select {
+            width: 200px;
+            height: 200px;
+            background: lightcyan;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="all" multiple="multiple">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+    </select>
+
+    <button class="allRight">>></button>
+    <button class="allLeft"><<</button> 
+    <button class="aloneRight">></button>
+    <button class="aloneLeft"><</button> 
+        <select id="select" multiple="multiple">
+            </select>
+
+
+            <script>
+                let allRight = document.querySelector('.allRight');
+                let allLeft = document.querySelector('.allLeft');
+                let aloneRight = document.querySelector('.aloneRight');
+                let aloneLeft = document.querySelector('.aloneLeft');
+                let all = document.querySelector('#all');
+                let select = document.querySelector('#select');
+
+
+                allRight.onclick = function () {
+                    let len = all.children.length;
+                    for (let i = 0; i < len; i++) {
+                       let option = all.children[0];
+                       select.appendChild(option);
+                    }
+                }
+            </script>
+</body>
+
+</html>

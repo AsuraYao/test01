@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">start</button>
+    <button class="btn2">end</button>
+   
+    <script>
+    // setTimeout   隔一段时间执行 并且只会执行一次
+    // setInterval  隔一段时间执行  并且会重复执行
+    
+    let btn1 = document.querySelector('.btn1');
+    let btn2 = document.querySelector('.btn2');
+    let timerId;
+
+    btn1.onclick = function(){
+        // 返回值是一个整数 是定时器的标示
+       timerId = setTimeout(boom ,3000); //  1. 要执行的函数   2.执行的事件，单位为ms
+    }
+    
+
+    btn2.onclick = function(){
+        // 取消定时器的执行 
+        clearTimeout(timerId);
+    }
+
+    function boom(){
+        console.log('booom');
+        
+    }
+    </script>
+</body>
+</html>

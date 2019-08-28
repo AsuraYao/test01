@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box table {
+            border-collapse: collapse;
+        }
+         .box tbody td {
+            text-align: center;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script>
+        let datas = [{
+                name: 'zww',
+                subject: 'math',
+                score: 90
+            },
+            {
+                name: 'zls',
+                subject: 'math',
+                score: 80
+            },
+            {
+                name: 'dwd',
+                subject: 'math',
+                score: 96
+            },
+            {
+                name: 'cdd',
+                subject: 'math',
+                score: 74
+            },
+            {
+                name: 'cxk',
+                subject: 'math',
+                score: 87
+            },
+            {
+                name: 'sdd',
+                subject: 'math',
+                score: 97
+            },
+        ];
+
+        let headDatas = ['name', 'subject', 'score', 'del'];
+
+        let box = document.querySelector('.box');
+
+        let table = document.createElement('table');
+        box.appendChild(table);
+        table.border = '1px';
+        table.width = '400px';
+
+
+        let thead = document.createElement('thead');
+        table.appendChild(thead);
+
+        let tr = document.createElement('tr');
+        thead.appendChild(tr);
+        tr.style.background = 'lightgray';
+        tr.style.height = '40px';
+
+
+        // 遍历表头数据，创建表头
+        for (let index = 0; index < headDatas.length; index++) {
+            let th = document.createElement('th');
+            tr.appendChild(th);
+            setInnerText(th, headDatas[index]);
+        };
+
+
+        let tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+
+        for (let i = 0; i < datas.length; i++) {
+            let data = datas[i];
+            tr = document.createElement('tr');
+            tbody.appendChild(tr);
+
+
+            //循环数组中的数据，填入表格中
+            for (let key in data) {
+                let td = document.createElement('td');
+                tr.appendChild(td);
+                setInnerText(td, data[key]);
+            }
+        };
+
+
+         // 兼容性问题
+        function setInnerText(element, content) {
+            if (typeof element.innerText === 'string') {
+                element.innerText = content;
+            } else {
+                element.textContent = content;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

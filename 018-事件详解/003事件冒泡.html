@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        #box2 {
+            width: 150px;
+            height: 150px;
+            background: green;
+        }
+
+        #box3 {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <div id="box2">
+            <div id="box3"></div>
+        </div>
+    </div>
+
+    <script>
+        let box1 = document.querySelector('#box1');
+        let box2 = document.querySelector('#box2');
+        let box3 = document.querySelector('#box3');
+
+        let array = [box1, box2, box3];
+
+        // addEventListener 的第三个参数为false时  事件冒泡
+        // addEventListener 的第三个参数为ture时   事件捕获
+        for (let i = 0; i < array.length; i++) {
+            array[i].addEventListener('click', function () {
+                console.log(this.id);
+            },false)
+        }
+    </script>
+</body>
+
+</html>

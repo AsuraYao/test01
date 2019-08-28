@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 每一个构造函数都有一个属性   原型/原型对象
+        function Hero(name, blood, weapon) {
+            this.name = name;
+            this.blood = blood;
+            this.weapon = weapon;
+        }
+
+        Hero.prototype.attack = function () {
+            console.log(this.weapon + '攻击敌人');
+        }
+        // 通过Hero构造函数，创建的对象，可以访问Hero.prototype中的成员
+
+        let hero1 = new Hero('lb', 100, '剑');
+        let hero2 = new Hero('zf', 100, '矛');
+
+        hero1.attack();
+        hero2.attack();
+    </script>
+</body>
+
+</html>

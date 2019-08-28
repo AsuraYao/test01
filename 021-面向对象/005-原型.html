@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function Hero(name, blood, weapon) {
+            this.name = name;
+            this.blood = blood;
+            this.weapon = weapon;
+            this.attack = attack;
+        }
+
+        function attack() {
+            console.log(this.weapon + '攻击敌人');
+        }
+        
+        let hero1 = new Hero('lb', 100, '剑');
+        let hero2 = new Hero('zf', 100, '矛');
+
+        hero1.attack();
+    </script>
+</body>
+
+</html>

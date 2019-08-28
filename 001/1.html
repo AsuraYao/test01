@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="mian.js"></script>
+    <!-- <script src="mian.js"></script> -->
 </head>
 
 <body>
-    <h1 class="one">yo</h1>
-</body>
+    <!-- <h1 class="one">yo</h1> -->
 
-</html>
-
-<script>
+    <script>
     // document.body.addEventListener('click', () => {
     //     console.log('ho');
     // })
@@ -37,4 +34,23 @@
     // }
     // let oddList = oddNumber([1,2,3,4]);
     // console.log('oddList :', oddList);
+
+
+    // leetcode
+    
+    var twoSum = function (nums, target) {
+        for (let i in nums) {
+            let other = target - nums[i];
+            if (nums.includes(other) && nums.indexOf(other) != i) {
+                return [i, nums.indexOf(other)];
+            }
+        }
+    }
+
+ twoSum([2,7,11,15],9);
+
 </script>
+</body>
+
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .btn {
+            margin: 10px;
+        }
+
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">开始</button>
+    <div class="box"></div>
+
+
+    <script>
+        // 1 点击按钮，使盒子向右移动
+        // 2 不停的向右移动
+
+        let btn = document.querySelector('.btn');
+        let box = document.querySelector('.box');
+
+        btn.onclick = function () {
+        // 获取盒子的当前位置  offsetLeft  offsetTop 
+        // box.style.left = box.offsetLeft + 10 + 'px';
+
+        setInterval(function(){
+            box.style.left = box.offsetLeft + 5 +'px';
+        },10);
+        }
+    </script>
+</body>
+
+</html>

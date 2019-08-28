@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">aaa</button>
+
+
+    <script>
+        let btn = document.querySelector('.btn');
+        //注册事件的第二种方式
+        //浏览器兼容有问题
+        
+        addEventListener(btn,'click',function(){
+            alert(1);
+        });
+
+        addEventListener(btn,'click',function(){
+            alert(2);
+        });
+
+        //处理浏览器兼容问题
+        //eventName  不带on click mouseover 之类的
+        function addEventListener(element, eventName, fn) {
+            // 判断当前浏览器是否支持该方法
+            if (element.addEventListener) {
+                element.addEventListener(eventName, fn); // 第三个参数默认false
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, fn);
+            } else {
+                element['on' + eventName] = fn;
+            }
+        }
+    </script>
+</body>
+
+</html>

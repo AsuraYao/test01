@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">点击</button>
+    <div class="box"></div>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let box = document.querySelector('.box');
+
+        let datas = [1, 2, 3, 4, 5, 6];
+
+        btn.onclick = function () {
+            let ul = document.createElement('ul');
+
+            box.appendChild(ul);
+
+            for (let index = 0; index < datas.length; index++) {
+                let data = datas[index];
+
+                let li = document.createElement('li');
+
+                ul.appendChild(li);
+
+                li.innerText = data;
+            }
+        }
+    </script>
+</body>
+
+</html>

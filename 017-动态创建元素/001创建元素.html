@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <button class="btn">search</button>
+    <div class="box"></div>
+
+    <script>
+        // 动态创建元素
+        // element innerHTML
+
+        // 模拟数据
+        let datas = [1, 2, 3, 4, 5];
+        let btn = document.querySelector('.btn');
+        let box = document.querySelector('.box');
+
+        // btn.onclick = function () {
+        //     let html = '<ul>';
+        //     for (let index = 0; index < datas.length; index++) {
+        //         let data = datas[index];
+        //         html += '<li>' + data + '</li>'
+        //     }
+        //     html += '</ul>';
+        //     box.innerHTML = html;
+        // }
+
+
+
+        // 优化内存    
+        btn.onclick = function () {
+
+            //使用数组代替字符串拼接，不需要重新开辟内存
+            let array = [];
+            array.push('<ul>');
+
+
+            for (let index = 0; index < datas.length; index++) {
+                let data = datas[index];
+                array.push('<li>' + data + '</li>');
+            }
+            array.push('</ul>');
+
+            box.innerHTML = array.join('~'); // ''为分隔符 
+
+        }
+    </script>
 </body>
+
 </html>

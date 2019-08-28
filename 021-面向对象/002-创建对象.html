@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+     // 对象字面量
+     // 适用于单个对象的创建
+    //  let hero = {
+    //      blood:100,
+    //      name:'zs',
+    //      weapon: 'jian',
+    //  };   // 空对象
+
+      
+    // 工厂函数  创建多个对象
+    function createHero(name,blood,weapon){
+        let o = new Object();
+        o.name = name;
+        o.blood = blood;
+        o.weapon = weapon;
+        o.attack = function(){
+            console.log(this.weapon + '攻击');
+        }
+        return o;
+    }
+
+    let hero1 = createHero('lb',100,'剑');
+    let hero2 = createHero('zf',100,'矛');
+    </script>
+</body>
+</html>
